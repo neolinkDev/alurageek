@@ -1,0 +1,51 @@
+:root {
+  --primary-color: #188df0;
+  --secondary-color: #1d2028;
+  --tertiary-color: #8390a6;
+
+  --border-color: #00487f;
+  --azul-claro: #34b5ff;
+  --gris-oscuro: #313641;
+  /* --white-color: #; */
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: "IBM Plex Mono", system-ui, -apple-system, sans-serif;
+  font-size: 1.6rem;
+  background-color: var(--secondary-color);
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+p,
+figure {
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2 {
+  font-family: "Press Start 2P", system-ui;
+}
