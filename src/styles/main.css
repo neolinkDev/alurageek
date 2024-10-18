@@ -1,2 +1,4 @@
 @import './base.css';
 @import './header/header.css';
+@import './sections/products-section.css';
+@import './sections/form-section.css';

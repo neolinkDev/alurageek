@@ -29,7 +29,68 @@
     </section>
 
     <section class="form-section">
-      <h2>agregar producto</h2>
+      <div class="form-section__container">
+        <h2>agregar producto:</h2>
+
+        <form class="product-form">
+
+          <div class="product-form__group">
+            
+            <input 
+              type="text" 
+              id="product-name" 
+              class="product-form__input" 
+              name="name" 
+              placeholder="nombre..."
+              required 
+              aria-required="true"
+            >
+          </div>
+        
+          <div class="product-form__group">
+            <input 
+              type="number" 
+              id="product-price" 
+              class="product-form__input" 
+              name="price" 
+              placeholder="precio..."
+              required 
+              aria-required="true"
+            >
+          </div>
+        
+          <div class="product-form__group">
+            <input 
+              type="url" 
+              id="product-image" 
+              class="product-form__input" 
+              name="image" 
+              placeholder="URL de la imagen..."
+              required 
+              aria-required="true"
+            >
+          </div>
+        
+          <div class="product-form__actions">
+
+            <button 
+              type="submit" 
+              class="product-form__button product-form__button--submit"
+            >
+              Enviar
+            </button>
+
+            <button 
+              type="reset" 
+              class="product-form__button product-form__button--reset"
+            >
+              Limpiar
+            </button>
+
+          </div>
+        </form>
+
+      </div>
     </section>
 
   </main>

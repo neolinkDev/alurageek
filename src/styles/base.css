@@ -6,7 +6,7 @@
   --border-color: #00487f;
   --azul-claro: #34b5ff;
   --gris-oscuro: #313641;
-  /* --white-color: #; */
+  --white-color: #fff;
 }
 
 html {
@@ -48,4 +48,8 @@ figure {
 h1,
 h2 {
   font-family: "Press Start 2P", system-ui;
+}
+
+h2 {
+  text-transform: uppercase;
 }

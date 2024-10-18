@@ -4,6 +4,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-bottom: 3.3rem;
 }
 
 .header__container {
@@ -27,10 +28,19 @@
 main {
   display: flex;
   flex-direction: column-reverse;
+  gap: 5.8rem;
 }
 
 @media (min-width: 768px) {
   main {
+    /* align-items: center; */
+    justify-content: center;
     flex-direction: row;
+    gap: 3.5rem;
+  }
+}
+@media (min-width: 1024px) {
+  main {
+    gap: 7rem;
   }
 }
