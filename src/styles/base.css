@@ -39,6 +39,7 @@ ul {
 h1,
 h2,
 h3,
+h5,
 p,
 figure {
   margin: 0;
@@ -52,4 +53,14 @@ h2 {
 
 h2 {
   text-transform: uppercase;
+}
+
+.container {
+  width: min(90%, 120rem);
+  margin: 0 auto;
+}
+
+.err {
+  color: var(--white-color);
+  text-align: center;
 }

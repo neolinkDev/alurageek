@@ -1,8 +1,110 @@
+@media (min-width: 768px) {
+  .products-section {
+    margin: 0 auto;
+  }
+}
 
+@media (min-width: 1024px) {
+  .products-section__container {
+    margin-top: 4rem;
+  }
+}
 
-
-
-
-/* .products-section h2 {
+.products-section h2 {
   font-weight: 400;
-} */
+  color: var(--tertiary-color);
+  font-size: 2.4rem;
+  line-height: 24px;
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.scroll-container {
+  display: flex;
+  gap: 1rem;
+  overflow-x: scroll;
+  scroll-snap-type: x mandatory;
+  padding: 1.5rem;
+}
+
+.scroll-container::-webkit-scrollbar {
+  width: 8px;
+  height: 0.5rem;
+}
+
+.scroll-container::-webkit-scrollbar-thumb {
+  border-radius: 1rem;
+  background: linear-gradient(45deg,
+      var(--primary-color),
+      var(--secondary-color));
+}
+
+@media (min-width: 768px) {
+  .scroll-container {
+    /* box-shadow: -12px 10px 5.8px 0px #00000040; */
+    box-shadow: -12px 10px 5.8px 0px #313641;
+    /* box-shadow: -12px 10px 5.8px 0px rgba(49,54,65,1); */
+    max-width: 678px;
+    height: 50vh;
+    /* padding: 1.5rem; */
+
+    /* display: flex; */
+    flex-wrap: wrap;
+    justify-content: center;
+    row-gap: 78px;
+
+    overflow-y: scroll;
+    overflow-x: hidden;
+    scroll-snap-type: y mandatory;
+  }
+}
+
+.card {
+  height: 258px;
+  border-radius: 10px;
+  border: 3px solid var(--white-color);
+  padding: 7px 10px 10px 10px;
+  box-shadow: -5px 6px 3.3px 0px var(--border-color);
+  background-color: var(--primary-color);
+}
+
+.card-img-container {
+  display: flex;
+  justify-content: center;
+}
+
+.card-img-top {
+  /* width: 176px; */
+  width: 176px;
+  height: 174px;
+  border-radius: 10px;
+  border: 3px solid var(--white-color);
+
+}
+
+.card-title {
+  margin-top: 1rem;
+  font-size: 1.5rem;
+  font-weight: 400;
+  line-height: 19.5px;
+  color: var(--secondary-color);
+}
+
+.card-actions {
+  display: flex;
+  margin-top: 1rem;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.card-price {
+  /* margin-top: 1rem; */
+  font-weight: 700;
+  font-size: 1.6rem;
+  line-height: 20.8px;
+  color: var(--secondary-color);
+}
+
+.card-actions img {
+  cursor: pointer;
+}
