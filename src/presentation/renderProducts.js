@@ -1,8 +1,9 @@
 import { getProducts } from '../services/api.js';
 
+ // Función asíncrona que renderiza los productos de la API y los muestra en el DOM
 export async function renderProducts() {
 
-  //
+  // Llamamos a la función `getProducts` para obtener los datos de los productos
   const products = await getProducts();
 
   // Selecciona el elemento donde se van a renderizar los productos
@@ -13,6 +14,7 @@ export async function renderProducts() {
     const productElement = document.createElement('div');
     productElement.classList.add('product');
 
+    // Card del item
     productElement.innerHTML = `
       <div class="card" style="width: 196px;">
 
