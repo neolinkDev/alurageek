@@ -21,3 +21,47 @@ export async function getProducts() {
     $productsContainer.innerHTML = `<p class="err">Error ${err.status}: ${message}</p>`;
   }
 }
+
+/**
+ * Envía una solicitud HTTP POST para crear un nuevo producto en la API fake
+ *
+ * @param {Object} newProduct
+ */
+export async function postProduct(newProduct) {
+  const $form = document.querySelector('[data-form]');
+
+  try {
+    const response = await fetch('http://localhost:3000/products', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(newProduct),
+    });
+
+    const json = await response.json();
+
+    if (!response.ok) {
+      throw {
+        status: json.status,
+        statusText: json.statusText,
+      };
+    }
+
+    //TODO agregar fn de alerta
+    alert('Producto agregado correctamente');
+  } catch (err) {
+    if (!$form.nextElementSibling || !$form.nextElementSibling.classList.contains('err')) {
+      let mensaje = err.status || 'Ocurrió un Error! No sé pudo agregar el producto.';
+      $form.insertAdjacentHTML('afterend', `<p class="err"><b>Error: ${mensaje}</b></p>`);
+
+      // Seleccionamos el elemento del mensaje de error
+      const errElement = $form.nextElementSibling;
+
+      // Eliminamos el elemento después de 2 segundos
+      setTimeout(() => {
+          errElement.remove();
+      }, 2000);
+  }
+  }
+}

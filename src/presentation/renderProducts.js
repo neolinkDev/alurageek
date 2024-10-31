@@ -22,7 +22,7 @@ export async function renderProducts() {
           <img
             src="${product.image}"
             class="card-img-top"
-            alt="Imagen del proyecto"
+            alt="Imagen del producto"
           />
         </div>
       
