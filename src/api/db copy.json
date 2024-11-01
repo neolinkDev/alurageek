@@ -1,0 +1,58 @@
+{
+  "products": [
+    {
+      "id": "1",
+      "name": "PlayStation 5",
+      "price": 11000,
+      "image": "https://res.cloudinary.com/dilteafq8/image/upload/v1729290832/alurageek/mjizgu6upi3etbwj4nne.jpg"
+    },
+    {
+      "id": "2",
+      "name": "PlayStation 5",
+      "price": 11000,
+      "image": "https://res.cloudinary.com/dilteafq8/image/upload/v1729290832/alurageek/mjizgu6upi3etbwj4nne.jpg"
+    },
+    {
+      "id": "3",
+      "name": "PlayStation 5",
+      "price": 11000,
+      "image": "https://res.cloudinary.com/dilteafq8/image/upload/v1729290832/alurageek/mjizgu6upi3etbwj4nne.jpg"
+    },
+    {
+      "id": "4",
+      "name": "PlayStation 5",
+      "price": 11000,
+      "image": "https://res.cloudinary.com/dilteafq8/image/upload/v1729290832/alurageek/mjizgu6upi3etbwj4nne.jpg"
+    },
+    {
+      "id": "5",
+      "name": "PlayStation 5",
+      "price": 11000,
+      "image": "https://res.cloudinary.com/dilteafq8/image/upload/v1729290832/alurageek/mjizgu6upi3etbwj4nne.jpg"
+    },
+    {
+      "id": "6",
+      "name": "PlayStation 5",
+      "price": 11000,
+      "image": "https://res.cloudinary.com/dilteafq8/image/upload/v1729290832/alurageek/mjizgu6upi3etbwj4nne.jpg"
+    },
+    {
+      "id": "7",
+      "name": "PlayStation 5",
+      "price": 11000,
+      "image": "https://res.cloudinary.com/dilteafq8/image/upload/v1729290832/alurageek/mjizgu6upi3etbwj4nne.jpg"
+    },
+    {
+      "id": "8",
+      "name": "PlayStation 5",
+      "price": 11000,
+      "image": "https://res.cloudinary.com/dilteafq8/image/upload/v1729290832/alurageek/mjizgu6upi3etbwj4nne.jpg"
+    },
+    {
+      "id": "9",
+      "name": "PlayStation 5",
+      "price": 11000,
+      "image": "https://res.cloudinary.com/dilteafq8/image/upload/v1729290832/alurageek/mjizgu6upi3etbwj4nne.jpg"
+    }
+  ]
+}

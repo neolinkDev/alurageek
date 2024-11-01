@@ -119,3 +119,8 @@
 .card-actions img {
   cursor: pointer;
 }
+
+.card-actions button {
+  background: transparent;
+  border: none;
+}

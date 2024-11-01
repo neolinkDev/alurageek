@@ -1,6 +1,9 @@
 import { postProduct } from '../services/api.js';
 import { isValidImageUrl } from '../utils/validation.js';
 
+/**
+ * Maneja el evento submit del formulario
+ */
 export function handlerProductFormSubmit() {
   const $form = document.querySelector('[data-form]');
 
@@ -27,3 +30,5 @@ export function handlerProductFormSubmit() {
     await postProduct(newProduct);
   });
 }
+
+

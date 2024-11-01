@@ -40,6 +40,7 @@ export async function postProduct(newProduct) {
     });
 
     const json = await response.json();
+    // console.log(json);
 
     if (!response.ok) {
       throw {
@@ -51,17 +52,81 @@ export async function postProduct(newProduct) {
     //TODO agregar fn de alerta
     alert('Producto agregado correctamente');
   } catch (err) {
-    if (!$form.nextElementSibling || !$form.nextElementSibling.classList.contains('err')) {
-      let mensaje = err.status || 'Ocurrió un Error! No sé pudo agregar el producto.';
-      $form.insertAdjacentHTML('afterend', `<p class="err"><b>Error: ${mensaje}</b></p>`);
+    if (
+      !$form.nextElementSibling ||
+      !$form.nextElementSibling.classList.contains('err')
+    ) {
+      let mensaje =
+        err.status || 'Ocurrió un Error! No sé pudo agregar el producto.';
+      $form.insertAdjacentHTML(
+        'afterend',
+        `<p class="err"><b>Error: ${mensaje}</b></p>`
+      );
 
       // Seleccionamos el elemento del mensaje de error
       const errElement = $form.nextElementSibling;
 
       // Eliminamos el elemento después de 2 segundos
       setTimeout(() => {
-          errElement.remove();
+        errElement.remove();
       }, 2000);
+    }
   }
+}
+
+/**
+ * Realiza la solicitud DELETE a la API fake para eliminar el producto mediante su ID
+ * 
+ * @param {string} productId 
+ */
+export async function deleteProduct(productId) {
+  const $productsContainer = document.querySelector('.products-container');
+
+  let isDelete = confirm('¿Seguro qué deseas eliminar este Producto?');
+
+  if (isDelete) {
+    try {
+      const response = await fetch(
+        `http://localhost:3000/products/${productId}`,
+        {
+          method: 'DELETE',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+        }
+      );
+
+      const json = await response.json();
+
+      if (!response.ok) {
+        throw {
+          status: json.status,
+          statusText: json.statusText,
+        };
+      }
+    } catch (err) {
+
+      if (
+        !$productsContainer.previousElementSibling ||
+        !$productsContainer.previousElementSibling.classList.contains('err')
+      ) {
+
+        let mensaje =
+          err.status || 'Ocurrió un Error! No sé pudo borrar la card.';
+  
+        $productsContainer.insertAdjacentHTML(
+          'beforebegin',
+          `<p class="err"><b>Error: ${mensaje}</b></p>`
+        );
+  
+        // Seleccionamos el elemento del mensaje de error
+        const errElement = $productsContainer.previousElementSibling;
+  
+        // Eliminamos el elemento después de 2 segundos
+        setTimeout(() => {
+          errElement.remove();
+        }, 3000);
+      }
+    }
   }
 }

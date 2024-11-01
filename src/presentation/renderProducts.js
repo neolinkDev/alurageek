@@ -1,4 +1,4 @@
-import { getProducts } from '../services/api.js';
+import { deleteProduct, getProducts } from '../services/api.js';
 
  // Función asíncrona que renderiza los productos de la API y los muestra en el DOM
 export async function renderProducts() {
@@ -33,7 +33,9 @@ export async function renderProducts() {
             <p class="card-price">
               ${product.price}
             </p>
-            <img src="public/icon-trash2.svg" alt="Eliminar card">
+            <button id="delete-btn" data-id=${product.id}>
+              <img src="public/icon-trash2.svg" alt="Eliminar card">
+            </button>
           </div>
 
         </div>
@@ -42,4 +44,22 @@ export async function renderProducts() {
 
     $productsContainer.appendChild(productElement);
   });
+
+  deleteProductCard()
+}
+
+/**
+ * Llama a la función `deleteProduct` para eliminar la card mediante la requisición DELETE
+ */
+function deleteProductCard() {
+  const $deleteButtons = document.querySelectorAll('#delete-btn');
+  
+  $deleteButtons.forEach(( deleteBtn ) => {
+    deleteBtn.addEventListener('click', async (e) => {
+      const productId = e.target.closest('button').dataset.id;
+      await deleteProduct(productId)
+    })
+  })
+
+ 
 }
