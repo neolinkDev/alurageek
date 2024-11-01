@@ -1,28 +1,22 @@
 {
   "products": [
     {
-      "id": "f50e",
-      "name": "Xbox Series X",
-      "price": "10000",
-      "image": "https://m.media-amazon.com/images/I/61QS7gvhulL._AC_SX679_.jpg"
-    },
-    {
-      "id": "e096",
-      "name": "Kratos",
-      "price": "444",
-      "image": "https://http2.mlstatic.com/D_NQ_NP_668049-MLU70065298983_062023-O.webp"
-    },
-    {
-      "id": "8e37",
-      "name": "Link",
-      "price": "4333",
-      "image": "https://www.smashbros.com/wiiu-3ds/images/character/toon_link/main.png"
-    },
-    {
-      "id": "ceeb",
-      "name": "PLayStation 5",
+      "id": "70e4",
+      "name": "Playstation 5",
       "price": "12000",
-      "image": "https://res.cloudinary.com/dilteafq8/image/upload/v1729290832/alurageek/mjizgu6upi3etbwj4nne.jpg"
+      "image": "https://res.cloudinary.com/dilteafq8/image/upload/v1729290832/alurageek/playstation5.jpg"
+    },
+    {
+      "id": "f8fb",
+      "name": "Kratos",
+      "price": "1222",
+      "image": "https://res.cloudinary.com/dilteafq8/image/upload/v1730484291/alurageek/kratos.jpg"
+    },
+    {
+      "id": "c49a",
+      "name": "Link",
+      "price": "677",
+      "image": "https://res.cloudinary.com/dilteafq8/image/upload/v1730484109/alurageek/link-heart.webp"
     }
   ]
 }
