@@ -1,4 +1,5 @@
 import { deleteProduct, getProducts } from '../services/api.js';
+import { formatPrice } from '../utils/formatPrice.js';
 
  // Función asíncrona que renderiza los productos de la API y los muestra en el DOM
 export async function renderProducts() {
@@ -36,7 +37,7 @@ export async function renderProducts() {
         
             <div class="card-actions">
               <p class="card-price">
-                ${product.price}
+                ${formatPrice(product.price)}
               </p>
               <button id="delete-btn" data-id=${product.id}>
                 <img src="public/icon-trash2.svg" alt="Eliminar card">
