@@ -17,6 +17,18 @@
       "name": "Link",
       "price": "677",
       "image": "https://res.cloudinary.com/dilteafq8/image/upload/v1730484109/alurageek/link-heart.webp"
+    },
+    {
+      "id": "96e1",
+      "name": "Tanjiro",
+      "price": "444",
+      "image": "https://res.cloudinary.com/dilteafq8/image/upload/v1730494641/alurageek/tanjiro-cabezon.webp"
+    },
+    {
+      "id": "b9a2",
+      "name": "Xbox Series X",
+      "price": "12000",
+      "image": "https://m.media-amazon.com/images/I/61QS7gvhulL._AC_SX679_.jpg"
     }
   ]
 }

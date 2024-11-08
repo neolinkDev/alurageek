@@ -1,5 +1,5 @@
 import { postProduct } from '../services/api.js';
-import { isValidImageUrl } from '../utils/validation.js';
+import { isValidImageUrl, validateInputName } from '../utils/validation.js';
 
 /**
  * Maneja el evento submit del formulario
@@ -23,6 +23,9 @@ export function handlerProductFormSubmit() {
       alert('Todos los campos son requeridos');
       return;
     }
+
+    //
+    if(!validateInputName(newProduct.name)) return;
 
     //
     if (!isValidImageUrl(newProduct.image)) return;

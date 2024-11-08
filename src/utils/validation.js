@@ -1,4 +1,21 @@
 /**
+ * Valida el input de Nombre
+ * @param {string} name
+ * @returns {boolean}
+ */
+export function validateInputName(name) {
+  // elimina espacios en blanco
+  const inputNameValue = name;
+
+  if (inputNameValue.length > 13) {
+    alert('El campo Nombre no puede tener más de 13 caracteres.');
+    return false;
+  }
+
+  return true;
+}
+
+/**
  * Valida que la url sea correcta
  *
  * @param {string} url
