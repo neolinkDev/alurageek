@@ -16,6 +16,25 @@ export function validateInputName(name) {
 }
 
 /**
+ * Valida el input de Nombre
+ * @param {string} price
+ * @returns {boolean}
+ */
+export function validateInputPrice(price) {
+  // elimina espacios en blanco
+  const inputPriceValue = parseFloat(price);
+
+  if (isNaN(inputPriceValue) || inputPriceValue <= 0 || price.length > 6 ) {
+    alert('El precio debe ser un número válido.');
+    return false;
+  }
+
+  return true;
+}
+
+
+
+/**
  * Valida que la url sea correcta
  *
  * @param {string} url

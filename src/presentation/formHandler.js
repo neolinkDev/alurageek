@@ -1,5 +1,5 @@
 import { postProduct } from '../services/api.js';
-import { isValidImageUrl, validateInputName } from '../utils/validation.js';
+import { isValidImageUrl, validateInputName, validateInputPrice } from '../utils/validation.js';
 
 /**
  * Maneja el evento submit del formulario
@@ -14,7 +14,7 @@ export function handlerProductFormSubmit() {
 
     const newProduct = {
       name: name.value.trim(),
-      price: price.value,
+      price: price.value.trim(),
       image: image.value,
     };
 
@@ -26,6 +26,9 @@ export function handlerProductFormSubmit() {
 
     //
     if(!validateInputName(newProduct.name)) return;
+
+    //
+    if(!validateInputPrice(newProduct.price)) return
 
     //
     if (!isValidImageUrl(newProduct.image)) return;
